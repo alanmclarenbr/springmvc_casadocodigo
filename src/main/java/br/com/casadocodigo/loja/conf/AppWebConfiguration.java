@@ -2,13 +2,14 @@ package br.com.casadocodigo.loja.conf;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.view.InternalResourceView;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
  * Created by Alan on 21/06/2017.
  */
+@Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "br.com.casadocodigo.loja")
 public class AppWebConfiguration {

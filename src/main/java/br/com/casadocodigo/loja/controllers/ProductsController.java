@@ -20,6 +20,7 @@ public class ProductsController {
     @RequestMapping("/produtos")
     public String save(Product product){
         System.out.println("Cadastrando o produto " + product);
+        productDAO.save(product);
 
         return "products/ok";
     }

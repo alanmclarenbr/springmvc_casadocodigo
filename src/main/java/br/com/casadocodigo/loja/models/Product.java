@@ -10,6 +10,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String title;
     @Lob
     private String description;
@@ -37,5 +38,13 @@ public class Product {
 
     public void setPages(int pages) {
         this.pages = pages;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
