@@ -1,6 +1,7 @@
 package br.com.casadocodigo.loja.conf;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -16,7 +17,7 @@ import java.util.Properties;
 /**
  * Created by Alan on 21/06/2017.
  */
-@configuration
+@Configuration
 @EnableTransactionManagement
 public class JPAConfiguration {
 
@@ -37,7 +38,7 @@ public class JPAConfiguration {
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mariadb://localhost:3328/casadocodigo");
+        dataSource.setUrl("jdbc:mysql://localhost:3328/casadocodigo");
         dataSource.setUsername("root");
         dataSource.setPassword("root");
         return dataSource;
